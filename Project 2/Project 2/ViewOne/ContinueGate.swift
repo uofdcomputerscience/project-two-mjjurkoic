@@ -12,27 +12,31 @@ import UIKit
 // on, the final value, canContinue, will be true, allowing
 // the user to proceed to the next screen.
 struct ContinueGate {
-    var segmentedSwitchOn: Bool
-    var firstSwitchOn: Bool
-    var secondSwitchOn: Bool
+    var aSwitchOn: Bool
+    var bSwitchOn: Bool
+    var cSwitchOn: Bool
+    var dSwitchOn: Bool
     var canContinue: Bool
     
     enum Switch {
-        case segmented
-        case first
-        case second
+        case a
+        case b
+        case c
+        case d
     }
     
     mutating func changeSwitchState(gate: Switch) {
-        if gate == .segmented {
-            segmentedSwitchOn.toggle()
-        } else if gate == .first {
-            firstSwitchOn.toggle()
-        } else if gate == .second {
-            secondSwitchOn.toggle()
+        if gate == .a {
+            aSwitchOn.toggle()
+        } else if gate == .b {
+            bSwitchOn.toggle()
+        } else if gate == .c {
+            cSwitchOn.toggle()
+        } else if gate == .d {
+            dSwitchOn.toggle()
         }
         
-        if segmentedSwitchOn && firstSwitchOn && secondSwitchOn {
+        if aSwitchOn && bSwitchOn && cSwitchOn && dSwitchOn {
             canContinue = true
         } else {
             canContinue = false

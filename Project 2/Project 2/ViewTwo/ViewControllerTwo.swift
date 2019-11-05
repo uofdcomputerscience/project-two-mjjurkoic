@@ -16,6 +16,7 @@ class ViewControllerTwo: UIViewController {
     @IBOutlet weak var sliderCounter: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
+    
     var continueGate: ContinueGateTwo?
     
     override func viewDidLoad() {
