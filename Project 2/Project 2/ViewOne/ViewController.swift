@@ -11,28 +11,59 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var firstStackView: UIStackView!
-    @IBOutlet weak var secondStackView: UIStackView!
     @IBOutlet weak var stackViewSwitcher: UISegmentedControl!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var aSwitch: UISwitch!
+    @IBOutlet weak var bSwitch: UISwitch!
+    @IBOutlet weak var cSwitch: UISwitch!
+    @IBOutlet weak var dSwitch: UISwitch!
     
     var continueGate: ContinueGate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         continueGate = ContinueGate(aSwitchOn: false, bSwitchOn: false, cSwitchOn: false, dSwitchOn: false, canContinue: false)
-        firstStackView.isHidden = false
-        secondStackView.isHidden = true
+        firstView.isHidden = false
+        secondView.isHidden = true
         continueButton.isEnabled = false
+        aSwitch.isEnabled = true
+        aSwitch.isOn = false
+        aSwitch.isUserInteractionEnabled = true
+        bSwitch.isEnabled = true
+        bSwitch.isOn = false
+        bSwitch.isUserInteractionEnabled = true
+        cSwitch.isEnabled = true
+        cSwitch.isOn = false
+        cSwitch.isUserInteractionEnabled = true
+        dSwitch.isEnabled = true
+        dSwitch.isOn = false
+        dSwitch.isUserInteractionEnabled = true
     }
     
     @IBAction func stackViewSwitcherChanged(_ sender: Any) {
-        if stackViewSwitcher.isEnabledForSegment(at: 0) {
-            firstStackView.isHidden = false
-            secondStackView.isHidden = true
-        } else if stackViewSwitcher.isEnabledForSegment(at: 1) {
-            firstStackView.isHidden = true
-            secondStackView.isHidden = false
-        }
+        firstView.isHidden.toggle()
+        secondView.isHidden.toggle()
+    }
+    
+    @IBAction func aStateChanged(_ sender: Any) {
+        continueGate?.changeSwitchState(gate: .a)
+        changeContinueButtonState()
+    }
+    
+    @IBAction func bStateChanged(_ sender: Any) {
+        continueGate?.changeSwitchState(gate: .b)
+        changeContinueButtonState()
+    }
+    
+    @IBAction func cStateChanged(_ sender: Any) {
+        continueGate?.changeSwitchState(gate: .c)
+        changeContinueButtonState()
+    }
+    
+    @IBAction func dStateChanged(_ sender: Any) {
+        continueGate?.changeSwitchState(gate: .d)
+        changeContinueButtonState()
     }
     
     func changeContinueButtonState() {
