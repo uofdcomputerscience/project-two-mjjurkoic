@@ -247,7 +247,7 @@
             </objects>
             <point key="canvasLocation" x="2269.5652173913045" y="138.61607142857142"/>
         </scene>
-        <!--View Controller Three-->
+        <!--Gate Three-->
         <scene sceneID="tPb-Ga-jnV">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerThree" useStoryboardIdentifierAsRestorationIdentifier="YES" id="heF-zy-zCq" customClass="ViewControllerThree" customModule="Project_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -274,6 +274,9 @@
                                 <rect key="frame" x="157.5" y="750" width="99" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="xbI-Cp-Rht" kind="show" id="FSp-hM-PLD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -290,7 +293,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MM0-nN-8eY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xsi-w2-fEO"/>
+                    <navigationItem key="navigationItem" title="Gate Three" id="Xsi-w2-fEO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="pd4-Oe-ZkT" id="9fP-Yd-xVG"/>
                         <outlet property="continueButton" destination="3ZG-VW-kXi" id="Ho5-eD-abL"/>
@@ -300,6 +303,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAG-18-ezO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3189.8550724637685" y="138.61607142857142"/>
+        </scene>
+        <!--Final Gate-->
+        <scene sceneID="GwI-uC-jWD">
+            <objects>
+                <viewController id="xbI-Cp-Rht" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KsH-Qr-qi9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ged-gB-wDK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Final Gate" id="kW2-HR-aUz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04t-C0-piz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4101" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ss2-ul-mse">
