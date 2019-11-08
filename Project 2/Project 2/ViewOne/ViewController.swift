@@ -20,9 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var dSwitch: UISwitch!
     
     var continueGate: ContinueGate?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         continueGate = ContinueGate(aSwitchOn: false, bSwitchOn: false, cSwitchOn: false, dSwitchOn: false, canContinue: false)
         firstView.isHidden = false
         secondView.isHidden = true
